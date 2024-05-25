@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/logout", to: "sessions#destroy", as: "logout"
   post "/login", to: "sessions#create"  
   get "/home", to: "sessions#index", as: "home"
+  get "/fetch", to: "fetch#index", as: "fetch"
   resources :sessions
   resources :users
 end

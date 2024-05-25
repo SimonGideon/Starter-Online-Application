@@ -5,6 +5,17 @@ class SessionsController < ApplicationController
         
     def new
     end
+
+    def fetch_data
+        begin
+          response = RestClient.get('https://cat-fact.herokuapp.com/facts/')
+          @data = JSON.parse(response.body)
+          render json: @data
+        rescue SocketError, RestClient::ExceptionWithResponse => e
+        # raise error 500
+        render_500
+        end
+      end
         
     def create
         user = User.authenticate(params[:email], params[:password])
@@ -25,11 +36,6 @@ class SessionsController < ApplicationController
           
         
     private
-    def require_login
-        unless current_user
-            redirect_to login_path
-        end
-    end
         
     def user_params
         params.require(:user).permit(:email, :password)
