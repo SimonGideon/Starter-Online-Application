@@ -65,7 +65,7 @@ In order to run this project you need:
 <ol>
   <li>Ruby 3.3.1</li>
   <li>Rails 7.1.3.2</li>
-  <li>Node >= 16.0</li>
+  <li>Node >= 14.21.3</li>
 </ol>
 
 ### Setup
@@ -103,7 +103,7 @@ To run tests, run the following command:
   rspec
 ```
 ## 🙂 Best Part of my code 🔥 <a name="best-part"></a>
-Having a solid understanding of the authentication and cryptography behind most of the `auth gems`. I decided to work my auth from scratch using `bcrypt gem` for secure hashing of the passwords. Create a session after a check wheither the user exist and delete the session on log out. The rest of the pages can only be accessed by the authorizes user `current_user`.
+Having a solid understanding of the authentication and cryptography behind most of the `auth gems`. I decided to work my auth from scratch using `bcrypt gem` for secure hashing of the passwords. Create a session after a check wheither the user exist and delete the session on log out. The rest of the pages can only be accessed by the authorized user `current_user`.
 
 Check here 👉 [Click Me](https://github.com/SimonGideon/Starter-Online-Application/blob/dev/app/models/user.rb#L3-L29) and also [Me](https://github.com/SimonGideon/Starter-Online-Application/blob/dev/app/controllers/sessions_controller.rb#L9-L19)
 
