@@ -66,13 +66,6 @@ In order to run this project you need:
   <li>Rails 7.1.3.2</li>
   <li>Node >= 16.0</li>
 </ol>
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
 
 ### Setup
 
