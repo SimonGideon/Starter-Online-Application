@@ -21,6 +21,7 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
+  - [🙂 Best Part of My Code 🔥💯](#best-part)
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -101,4 +102,9 @@ To run tests, run the following command:
 ```sh
   rspec
 ```
+## 🙂 Best Part of the code 🔥 <a name="best-part"></a>
+Having a solid understanding of the authentication and cryptography behind most of the `auth gems`. I decided to work my auth from scratch using `bcrypt gem` for secure hashing of the passwords. Create a session after a check wheither the user exist and delete the session on log out. The rest of the pages can only be accessed by the authorizes user `current_user`.
+
+Check here 👉 [Click Me](https://github.com/SimonGideon/Starter-Online-Application/blob/dev/app/models/user.rb#L3-L29) and also [Me](https://github.com/SimonGideon/Starter-Online-Application/blob/dev/app/controllers/sessions_controller.rb#L9-L19)
+
 
