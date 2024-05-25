@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag 'home' %>
 <main class="container mt-5">
-  <h1 class="text">Welcome to <%= current_user.username %>!</h1>
+  <h1 class="text">Welcome <%= current_user.username %>!</h1>
 
   <div class="my-4">
     <%= button_to "Fetch data...", fetch_path, method: :get, class: "btn btn-primary" %>
