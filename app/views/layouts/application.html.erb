@@ -11,12 +11,21 @@
   </head>
 
   <body>
+  <div class="container w-25 position-absolute z-1 message-cont">
     <% if flash[:notice] %>
-      <p class="notice"><%= flash[:notice] %></p>
+      <div class="message alert alert-success alert-dismissible fade show" role="alert">
+        <%= flash[:notice] %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
     <% end %>
     <% if flash[:alert] %>
-      <p class="alert"><%= flash[:alert] %></p>
+      <div class="message alert alert-danger alert-dismissible fade show" role="alert">
+        <%= flash[:alert] %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
     <% end %>
-    <%= yield %>
-  </body>
+  </div>
+  <%= yield %>
+</body>
+
 </html>

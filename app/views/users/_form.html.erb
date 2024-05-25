@@ -1,35 +1,34 @@
-<%= form_with(model: user) do |form| %>
+<%= form_with(model: user, class: "form") do |form| %>
+    
+  <p class="form-title">Register</p>
   <% if user.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
+    <div class="error-messages">
       <ul>
-        <% user.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div>
+  <div class="input-container">
     <%= form.label :username, style: "display: block" %>
     <%= form.text_field :username, :required => true %>
   </div>
 
-  <div>
+  <div class="input-container">
     <%= form.label :email, style: "display: block" %>
     <%= form.text_field :email, :required=> true%>
   </div>
-  <div>
+  <div class="input-container">
     <%= form.label :password, style: "display: block" %>
     <%= form.password_field :password, :required=> true %>
   </div>
-  <div>
+  <div class="input-container">
     <%= form.label :password_confirmation, style: "display: block" %>
     <%= form.password_field :password_confirmation, :required=> true %>
   </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+    <%= form.submit "Sing up", class: "submit" %>
+    <p class="text-center">
+      <%= link_to "Login", login_path, class: "link" %>
+    <p>
 <% end %>

@@ -1,8 +1,14 @@
-<h1>Welcome to the Sessions Index Page</h1>
-<%# you singed in as %>
+<%= stylesheet_link_tag 'home' %>
+<main class="container mt-5">
+  <h1 class="text">Welcome to <%= current_user.username %>!</h1>
 
-<%= current_user.username %>
-<%=button_to "Fetch Data", fetch_path, method: :get %>
+  <div class="my-4">
+    <%= button_to "Fetch data...", fetch_path, method: :get, class: "btn btn-primary" %>
+  </div>
 
-<%# logout %>
-<%= link_to "Logout", logout_path %>
+  <%# Logout %>
+  <div>
+    <%= link_to "Logout", logout_path, class: "btn btn-secondary" %>
+  </div>
+</main>
+
