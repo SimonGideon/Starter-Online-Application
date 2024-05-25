@@ -2,8 +2,19 @@ require 'bcrypt'
 class User < ApplicationRecord
     include BCrypt
     validates :username, presence: true
-    validates :email, uniqueness: true , presence: true
+    validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
     validates :password, presence: true, confirmation: true, on: :create
+    validates :username, presence: true, uniqueness: true
+
+    def self.authenticate(email, password)
+        user = User.find_by(email: email)
+        if user && user.password == password
+            user
+        else
+            nil
+            
+        end
+    end
 
     def password
         @password ||= Password.new(password_hash)
