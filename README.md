@@ -4,7 +4,7 @@
 <div align="center">
   <br/>
 
-  <h3><b>PROJECT README</b></h3>
+  <h3><b>STARTER ONLINE APPLICATION</b></h3>
 
 </div>
 
@@ -15,8 +15,6 @@
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -26,9 +24,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Starter Online Application <a name="about-project"></a>
 
-**[your_project__name]** is a...
+**Starter Online Application** is a simple online platform that allows users to register, login and query data via APIs.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -36,14 +34,15 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://html.com/">HTML</a></li>
+    <li><a href="https://css.org/">CSS</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
   </ul>
 </details>
 
@@ -62,7 +61,11 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 In order to run this project you need:
-
+<ol>
+  <li>Ruby 3.3.1</li>
+  <li>Rails 7.1.3.2</li>
+  <li>Node >= 16.0</li>
+</ol>
 <!--
 Example command:
 
@@ -75,48 +78,34 @@ Example command:
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone https://github.com/SimonGideon/Starter-Online-Application
 ```
---->
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
-
 ```sh
-  cd my-project
+  cd starterapp
   gem install
 ```
---->
 
 ### Usage
 
-To run the project, execute the following command:
-
-<!--
-Example command:
+To run the project, execute the following command (RECOMENDED: Run separately):
 
 ```sh
-  rails server
+  rails db:create
+  rails db:migrate
+  rails s
 ```
---->
 
 ### Run tests
 
 To run tests, run the following command:
-
-<!--
-Example command:
-
 ```sh
-  bin/rails test test/models/article_test.rb
+  rspec
 ```
---->
+
